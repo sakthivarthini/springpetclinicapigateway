@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework.samples.petclinic.api</groupId>
     <artifactId>spring-petclinic-api-gateway</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0</version> <!-- Add the version element here -->
     <packaging>jar</packaging>
     <description>Spring PetClinic API Gateway</description>
-
-   
 
     <properties>
         <webjars-bootstrap.version>3.3.7-1</webjars-bootstrap.version>
