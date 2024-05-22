@@ -9,22 +9,14 @@
     <packaging>jar</packaging>
     <description>Spring PetClinic API Gateway</description>
 
-    
-
-    <!-- parent>
-        <groupId>org.springframework.samples</groupId>
-        <artifactId>spring-petclinic-microservices</artifactId>
-        <version>3.2.4</version>
-    </parent -->
-
     <properties>
         <webjars-bootstrap.version>3.3.7-1</webjars-bootstrap.version>
         <webjars-jquery.version>3.6.0</webjars-jquery.version>
         <webjars-angular.version>1.8.2</webjars-angular.version>
         <webjars-angular-ui-router.version>1.0.20</webjars-angular-ui-router.version>
         <wro4j.version>1.8.0</wro4j.version>
-         <maven.compiler.source>17</maven.compiler.source>
-         <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <docker.image.exposed.port>8081</docker.image.exposed.port>
         <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
     </properties>
@@ -93,7 +85,6 @@
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
             <version>1.8.1</version>
-            
         </dependency>
         <dependency>
             <groupId>io.github.resilience4j</groupId>
@@ -103,7 +94,6 @@
         <dependency>
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-exporter-zipkin</artifactId>
-            
             <version>1.38.0</version>
         </dependency>
         <dependency>
@@ -165,16 +155,14 @@
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>mockwebserver</artifactId>
-            <version>4.9.3</version> 
+            <version>4.9.3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
-   
 
     <build>
         <plugins>
             <plugin>
-               
                 <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
                 <version>${wro4j.version}</version>
@@ -210,9 +198,6 @@
             </plugin>
         </plugins>
     </build>
-
-    
-    
 
     <profiles>
         <profile>
