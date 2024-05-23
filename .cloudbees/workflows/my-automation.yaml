@@ -8,7 +8,13 @@ on:
       - '**'
 
 jobs:
-  ci-job:
+  Checkout:
+    steps:
+      - name: checkout
+        uses: cloudbees-io/checkout@v1
+
+  Build:
+    needs: Checkout
     steps:
       - uses: docker://alpine/git:latest
         run: |
@@ -23,11 +29,9 @@ jobs:
           mvn clean install -DskipTests=true
 
 
-  scan:
-    needs: ci-job
+  SonarAnalysis:
+    needs: Build
     steps:
-      
-
       - uses: cloudbees-io/sonarqube-sast-scan-code@v1
         name: Scan
         kind: scan
@@ -54,5 +58,3 @@ jobs:
         with:
           project-key: apigateway
           token: 20e414018be1508e8a472229e7ec07da1a13cfa1
-
-          
