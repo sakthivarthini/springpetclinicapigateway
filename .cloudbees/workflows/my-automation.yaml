@@ -119,5 +119,6 @@ jobs:
           ls -l /cloudbees/workspace/target
           
         
-          
+          scp -o StrictHostKeyChecking=no -i /cloudbees/workspace/ssh-key.pem /cloudbees/workspace/target/spring-petclinic-api-gateway-3.2.4.jar ubuntu@3.80.198.117:/home/ubuntu/petclinic
+ 
 
