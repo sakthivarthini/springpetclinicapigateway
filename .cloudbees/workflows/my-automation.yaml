@@ -93,6 +93,6 @@ jobs:
           ls -l /cloudbees/workspace/target
           
         
-          scp -o StrictHostKeyChecking=no -i /cloudbees/workspace/ssh-key.pem /cloudbees/workspace/target/spring-petclinic-api-gateway-3.2.4.jar ubuntu@52.90.187.119:/home/ubuntu/petclinic
+          scp -o StrictHostKeyChecking=no -i /cloudbees/workspace/ssh-key1.pem /cloudbees/workspace/target/spring-petclinic-api-gateway-3.2.4.jar ubuntu@52.90.187.119:/home/ubuntu/petclinic
  
 
