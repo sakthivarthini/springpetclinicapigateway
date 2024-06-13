@@ -22,6 +22,18 @@
         <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
     </properties>
 
+         <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2021.0.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <!-- Spring Boot -->
         <dependency>
@@ -69,6 +81,11 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
             <version>3.1.5</version>
         </dependency>
+         <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+    <version>3.1.1</version>
+</dependency>
 
         <!-- Third parties -->
         <dependency>
