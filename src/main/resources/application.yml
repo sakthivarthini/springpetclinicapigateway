@@ -24,6 +24,8 @@ spring:
             - Path=/api/customer/**
           filters:
             - StripPrefix=2
+server:
+   port: 9898
 
 
 
