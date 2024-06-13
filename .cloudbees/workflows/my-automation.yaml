@@ -88,11 +88,11 @@ jobs:
         run: |
           apk update
           apk add openssh-client
-          echo "$EC2_SSH_KEY" > /cloudbees/workspace/ssh-key.pem
-          chmod 600 /cloudbees/workspace/ssh-key.pem
+          echo "$EC2_SSH_KEY" > /cloudbees/workspace/ssh-key1.pem
+          chmod 600 /cloudbees/workspace/ssh-key1.pem
           ls -l /cloudbees/workspace/target
           
         
-          scp -o StrictHostKeyChecking=no -i /cloudbees/workspace/ssh-key.pem /cloudbees/workspace/target/spring-petclinic-api-gateway-3.2.4.jar ubuntu@3.80.198.117:/home/ubuntu/petclinic
+          scp -o StrictHostKeyChecking=no -i /cloudbees/workspace/ssh-key.pem /cloudbees/workspace/target/spring-petclinic-api-gateway-3.2.4.jar ubuntu@52.90.187.119:/home/ubuntu/petclinic
  
 
