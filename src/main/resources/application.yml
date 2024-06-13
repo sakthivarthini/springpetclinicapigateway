@@ -25,7 +25,7 @@ spring:
           filters:
             - StripPrefix=2
 server:
-   port: 9898
+  port: 9898
 
 
 
