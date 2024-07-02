@@ -29,7 +29,7 @@ jobs:
           mvn clean install -DskipTests=true
 
 
-  SonarAnalysis:
+  StaticAnalysis:
     needs: Build
     steps:
       - uses: cloudbees-io/sonarqube-sast-scan-code@v1
@@ -60,8 +60,8 @@ jobs:
           token: 20e414018be1508e8a472229e7ec07da1a13cfa1
 
 
-  NexusPublish:
-    needs: [SonarAnalysis]
+  ArtifactPublish:
+    needs: [StaticAnalysis]
     steps:
       - uses: docker://alpine/git:latest
         run: |
@@ -86,8 +86,8 @@ jobs:
 
 
   
-  CreateEC2Instance:
-    needs: [NexusPublish]
+  DeployApplicationAWS:
+    needs: [ArtifactPublish]
     steps:
       - uses: docker://alpine/git:latest
         run: |
