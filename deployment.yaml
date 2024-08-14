@@ -51,7 +51,7 @@ spec:
     - host: ""
       http:
         paths:
-          - path: /apigateway
+          - path: //#!/welcome
             pathType: Prefix
             backend:
               service:
