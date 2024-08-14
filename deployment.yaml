@@ -51,7 +51,7 @@ spec:
     - host: ""
       http:
         paths:
-          - path: /welcome
+          - path: /WelcometoPetclinic
             pathType: Prefix
             backend:
               service:
