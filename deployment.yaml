@@ -47,13 +47,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: 34.148.165.92
-      http:
+    - http:
         paths:
-          - path: /service
+          - path: /apigetway
             pathType: Prefix
             backend:
               service:
                 name: apigateway-service
                 port:
                   number: 80
+
