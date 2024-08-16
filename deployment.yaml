@@ -47,7 +47,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: ""
+    - host: 34.148.165.92
       http:
         paths:
           - path: /service
