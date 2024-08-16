@@ -47,10 +47,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: apigetway.com
+    - host: ""
       http:
         paths:
-          - path: /
+          - path: /service
             pathType: Prefix
             backend:
               service:
