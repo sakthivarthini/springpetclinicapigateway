@@ -49,21 +49,21 @@ spec:
   rules:
     - http:
         paths:
-          - path: /api/vet/**
+          - path: /api/vet/
             pathType: Prefix
             backend:
               service:
                 name: apigateway-service
                 port:
                   number: 80
-          - path: /api/visit/**
+          - path: /api/visit/
             pathType: Prefix
             backend:
               service:
                 name: apigateway-service
                 port:
                   number: 80
-          - path: /api/customer/**
+          - path: /api/customer/
             pathType: Prefix
             backend:
               service:
